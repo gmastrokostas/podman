@@ -7,3 +7,12 @@ sudo podman pull ubi9/ubi
 
 #To list for all downloaded images
 sudo podman images
+
+#To Run an image
+podman run 
+
+#To show all containers 
+podman ps -a
+
+#To show only running containers
+podman ps
