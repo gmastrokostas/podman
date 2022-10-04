@@ -1,0 +1,9 @@
+#Search for images
+podman search ubi
+podman search suse
+
+#To pull a container. This does not run it
+sudo podman pull ubi9/ubi
+
+#To list for all downloaded images
+sudo podman images
