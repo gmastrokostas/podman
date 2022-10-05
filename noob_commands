@@ -2,6 +2,8 @@
 podman search ubi
 podman search suse
 
+
+####IMAGES
 #To pull a container. This does not run it
 sudo podman pull ubi9/ubi
 
@@ -11,19 +13,21 @@ sudo podman images
 #To remove an image
 podman rmi "imageid"
 
-
-#To Run an image ... -d detached mode  ... -it interactive mode
+#To start a container directly from an image ... -d detached mode  ... -it interactive mode
 podman run "image name"
 
-#To start a container 
+
+####CONTAINERS
+#To build a container from an image
+podman create 51086ed63d8c
+
+#To start a container
 podman start "container_name"
 
+#To Stop a  container
+podman stop "container_name"
 
-
-#To Stop an image
-podman stop "name_of_image"
-
-#To show all containers, even none running 
+#To show all containers, even none running
 podman ps -a
 
 #To show only running containers
@@ -31,3 +35,4 @@ podman ps
 
 #To remove a container
 podman rm "name"
+
