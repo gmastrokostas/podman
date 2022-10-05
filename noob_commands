@@ -8,11 +8,26 @@ sudo podman pull ubi9/ubi
 #To list for all downloaded images
 sudo podman images
 
-#To Run an image
-podman run 
+#To remove an image
+podman rmi "imageid"
 
-#To show all containers 
+
+#To Run an image ... -d detached mode  ... -it interactive mode
+podman run "image name"
+
+#To start a container 
+podman start "container_name"
+
+
+
+#To Stop an image
+podman stop "name_of_image"
+
+#To show all containers, even none running 
 podman ps -a
 
 #To show only running containers
 podman ps
+
+#To remove a container
+podman rm "name"
