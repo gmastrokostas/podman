@@ -36,3 +36,11 @@ podman ps
 #To remove a container
 podman rm "name"
 
+####Inspect / FILTERS
+#List all filters
+podman inspect gallant_mahavir
+
+#View a specific filter
+podman inspect -l -f  "{{."State.Status"}}"
+
+
