@@ -11,11 +11,13 @@ sudo podman pull ubi9/ubi
 sudo podman images
 
 #To remove an image
-podman rmi "imageid"
+podman rmi "image_id"
 
 #To start a container directly from an image ... -d detached mode  ... -it interactive mode
-podman run "image name"
+podman run "image_id"
 
+#To save an image as a tar
+podman save  -o image_xyz.tar "image_id"
 
 ####CONTAINERS
 #To build a container from an image
@@ -23,6 +25,9 @@ podman create 51086ed63d8c
 
 #To start a container
 podman start "container_name"
+
+#To start a container by passing variables
+podman run -d -e MYSQL_ROOT_PASSWORD=hello
 
 #To Stop a  container
 podman stop "container_name"
