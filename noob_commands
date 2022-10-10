@@ -5,10 +5,10 @@ podman search suse
 
 ####IMAGES
 #To pull a container. This does not run it
-sudo podman pull ubi9/ubi
+podman pull ubi9/ubi
 
 #To list for all downloaded images
-sudo podman images
+podman images
 
 #To remove an image
 podman rmi "image_id"
@@ -20,6 +20,7 @@ podman run "image_id"
 podman save  -o image_xyz.tar "image_id"
 
 ####CONTAINERS
+
 #To build a container from an image
 podman create 51086ed63d8c
 
@@ -27,7 +28,7 @@ podman create 51086ed63d8c
 podman start "container_name"
 
 #To start a container by passing variables
-podman run -d -e MYSQL_ROOT_PASSWORD=hello
+podman start -d -e MYSQL_ROOT_PASSWORD=hello
 
 #To Stop a  container
 podman stop "container_name"
@@ -40,6 +41,10 @@ podman ps
 
 #To remove a container
 podman rm "name"
+
+#To add a tagg
+podman tag docker.io/library/ubuntu  localhost:5000/docker.io/library/ubuntu:testingtags
+
 
 ####Inspect / FILTERS
 #List all filters
