@@ -19,6 +19,10 @@ podman run "image_id"
 #To save an image as a tar
 podman save  -o image_xyz.tar "image_id"
 
+#To add a tagg
+podman tag docker.io/library/ubuntu  localhost:5000/docker.io/library/ubuntu:testingtags
+
+
 ####CONTAINERS
 
 #To build a container from an image
@@ -41,9 +45,6 @@ podman ps
 
 #To remove a container
 podman rm "name"
-
-#To add a tagg
-podman tag docker.io/library/ubuntu  localhost:5000/docker.io/library/ubuntu:testingtags
 
 
 ####Inspect / FILTERS
