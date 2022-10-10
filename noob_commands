@@ -46,6 +46,8 @@ podman ps
 #To remove a container
 podman rm "name"
 
+#To perfom a diff of your running container against the container image it self
+podman diff "name_of_your_container"
 
 ####Inspect / FILTERS
 #List all filters
