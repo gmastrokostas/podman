@@ -37,6 +37,9 @@ podman start -d -e MYSQL_ROOT_PASSWORD=hello
 #To Stop a  container
 podman stop "container_name"
 
+#To execute a command on a container
+podman exec -it myimagename bash
+
 #To show all containers, even none running
 podman ps -a
 
