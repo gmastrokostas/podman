@@ -14,7 +14,7 @@ podman images
 podman rmi "image_id"
 
 #To start a container directly from an image ... -d detached mode  ... -it interactive mode
-podman run "image_id"
+podman run --name georgem "image_id"
 
 #To save an image as a tar
 podman save  -o image_xyz.tar "image_id"
