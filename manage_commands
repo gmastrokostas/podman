@@ -1,0 +1,64 @@
+#Search for images
+podman search ubi
+podman search suse
+
+
+####IMAGES
+#To pull a container. This does not run it
+podman pull ubi9/ubi
+
+#To list for all downloaded images
+podman images
+
+#To remove an image
+podman rmi "image_id"
+
+#To start a container directly from an image ... -d detached mode  ... -it interactive mode
+podman run --name georgem "image_id"
+
+#To save an image as a tar
+podman save  -o image_xyz.tar "image_id"
+
+#To add a tagg
+podman tag docker.io/library/ubuntu  localhost:5000/docker.io/library/ubuntu:testingtags
+
+
+####CONTAINERS
+
+#To build a container from an image
+podman create 51086ed63d8c
+
+#To start a container
+podman start "container_name"
+
+#To start a container by passing variables
+podman start -d -e MYSQL_ROOT_PASSWORD=hello
+
+#To Stop a  container
+podman stop "container_name"
+
+#To execute a command on a container
+podman exec -it myimagename bash
+
+#To show all containers, even none running
+podman ps -a
+
+#To show only running containers
+podman ps
+
+#To remove a container
+podman rm "name"
+
+#To perfom a diff of your running container against the container image it self
+podman diff "name_of_your_container"
+
+####Inspect / FILTERS
+#List all filters
+podman inspect gallant_mahavir
+
+#View a specific filter
+podman inspect -l -f  "{{."State.Status"}}"
+
+#Inspect an image
+podman image inspect "some_image"
+
