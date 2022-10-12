@@ -1,0 +1,2 @@
+#Assing a port to a container
+podman create --name=web -p 8080:80 nginx

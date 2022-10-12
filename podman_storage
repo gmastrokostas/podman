@@ -1,0 +1,9 @@
+#Assing storage on a container - The easy way
+podman create -d --name=nginx -v /storage_dir/web:/var/lib/nginx:Z
+
+#Assing storage on a contain - The long way
+mkdir /storage_dir/web
+semanage fcontext -a -t container_file_t "/storage_dir/web/(/.*)?"
+restorecon
+podman create -d --name=nginx -v /storage_dir/web:/var/lib/nginx
+
